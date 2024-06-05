@@ -46,7 +46,7 @@ CREATE TABLE temp_flights (
 
 -- IMPORT DATA FROM CSV FILES INTO TEMPORARY TABLES
 
-LOAD DATA LOCAL INFILE '/path/airlines.csv'
+LOAD DATA LOCAL INFILE '/pathname/airlines.csv'
 INTO TABLE temp_airlines
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n'
@@ -54,7 +54,7 @@ IGNORE 1 ROWS
 (airline_id, carrier_region, carrier, carrier_name)
 ;
 
-LOAD DATA LOCAL INFILE '/path/aircrafts.csv'
+LOAD DATA LOCAL INFILE '/pathname/aircrafts.csv'
 INTO TABLE temp_aircrafts
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n'
@@ -62,7 +62,7 @@ IGNORE 1 ROWS
 (aircraft_group, aircraft_type)
 ;
 
-LOAD DATA LOCAL INFILE '/path/origin airports.csv'
+LOAD DATA LOCAL INFILE '/pathname/origin airports.csv'
 INTO TABLE temp_airports
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
@@ -70,7 +70,7 @@ IGNORE 1 ROWS
 (airport_id, airport_code, city, state, country)
 ;
     
-LOAD DATA LOCAL INFILE '/path/dest airports.csv'
+LOAD DATA LOCAL INFILE '/pathname/dest airports.csv'
 INTO TABLE temp_airports
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
@@ -78,7 +78,7 @@ IGNORE 1 ROWS
 (airport_id, airport_code, city, state, country)
 ;
 
-LOAD DATA LOCAL INFILE '/path/flights.csv'
+LOAD DATA LOCAL INFILE '/pathname/flights.csv'
 INTO TABLE temp_flights
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
